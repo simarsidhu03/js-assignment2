@@ -1,0 +1,192 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+GENERAL
+- - - - - - - - - - - - - - - - - - - - - - - - */
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.primary-button {
+    padding: 10px 30px;
+    border-radius: 30px;
+    background: #333;
+    color: white;
+    border: 1px solid #333;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.secondary-button {
+    padding: 10px 30px;
+    border-radius: 30px;
+    background: #777;
+    color: white;
+    border: 1px solid #777;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+HEADER
+- - - - - - - - - - - - - - - - - - - - - - - - */
+header {
+    height: 80px;
+    background: #333;
+}
+
+header nav .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+header .logo {
+    background: url('./assets/logo.svg');
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+header li {
+    color: white;
+    list-style: none;
+    margin: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+HERO
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.hero {
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.4)
+        ),
+        url('https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80');
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    padding-top: 10vh;
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: 300;
+    margin-bottom: 1px;
+}
+.hero h2 {
+    margin-top: 0;
+}
+
+.hero p {
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+MAIN CONTENT
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.main-content {
+    padding: 80px 0;
+}
+
+.main-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+FOOTER
+- - - - - - - - - - - - - - - - - - - - - - - - */
+footer {
+    height: 300px;
+    background: #333;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - 
+NEW CSS
+- - - - - - - - - - - - - - - - - - - - - - - */
+body{
+    overflow-x: hidden;
+}
+.hamburger-menu, .ham-cross{
+    display: none;
+}
+@media screen and (orientation:portrait){
+    
+    .ham-logo,.ham-cross-logo {
+        height:25px;
+        width:25px;
+        cursor: pointer;
+        position: absolute;
+        top:2rem;
+        right:2rem;
+    }
+
+    .ham-cross-logo{
+        top:1rem;
+        right:1rem;
+    }
+
+    .hamburger-menu{
+        display:block;
+        right:0;
+        top:0;
+    }
+
+    .hamburger-list{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .ham-cross{   
+        display: block;        
+        position:fixed;
+        transform: translateX(0vw);
+        transition-duration: 0.3s;
+        right:-50vw;
+        top:0;
+        height:100vh; 
+        width:50vw;
+        background-color:black;      
+    }
+
+    .hamburger-open{ 
+        transform:translateX(-50vw); 
+        transition-duration: 0.3s;
+    }
+  
+    .wrapper ul li{
+        display: none;
+    }
+
+    .list ul{
+        flex-direction: column;
+    }
+
+    .list ul li{
+        padding:1rem;
+        font-size: 18px;
+    }
+  
+}
